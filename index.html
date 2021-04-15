@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>(Демид) IronGun</title>
+	<link href="capes.css" rel='stylesheet'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="slider/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<script type="text/javascript" src="jquery.pagepiling.js"></script>
+	<script src="slider/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+  </head>
+  <body>
+	  	<div id="pagepiling">
+			<div class="section first-section">
+				<div class="middle-right-text">
+					<p class="text-1">Я - Демид</p>
+					<p class="text-2">aka IronGun</p>
+				</div>
+				<div class="hector">
+					<p class="small-text small-elem">Hector!</p>
+					<img src="images/hector.png" class="small-elem" id="hector">
+				</div>
+				<div class="my-photo">
+					<img src="images/photo.png">
+				</div>
+			</div>
+			<div class="section second-section">
+				<div class="middle-left-text">
+					<h1>Мои работы</h1>
+					<blockquote>
+						<p>Хочешь сделать что-то красиво - пихай на фон аниме</p>
+						<footer>— <cite>Демид, 2021</cite></footer>
+					</blockquote>
+
+				</div>
+
+				<!--slider-->
+				<div class="left-side">
+				<div class="slider">
+					<div class="slider__wrapper">
+					<div class="slider__items">
+						<div class="slider__item">
+						<div style="height: 270px; margin: 0;">
+							<div class="slider-half-item" style="float:left">
+								<div class="half-text-item">
+									<p class="slider-text-one">CameraArranger</p>
+									<p class="slider-text-two">программа для автоматической расстановки камер в помещении</p>
+									<p class="low-margin"><a href="https://github.com/maximdervis/CameraArranger" target="_blank"><img src="https://img.icons8.com/material-sharp/30/ffffff/github.png" width="30" height="30"></a></p>
+								</div>
+							</div>
+							<div class="slider-half-item" style="float:right">
+								<div class="image-scale scale-div-block">
+									<a data-fancybox="images" href="images/camarr.png">
+										<img src="images/camarr.png" class="slider-image image-scale">
+									</a>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="slider__item">
+						<div style="height: 270px">
+							<div class="slider-half-item" style="float:left">
+								<div class="half-text-item">
+									<p class="slider-text-one">Бот "Оценки"</p>
+									<p class="slider-text-two">бот для удобного получения и представления оценок из электронного дневника с кучей функций</p>
+									<p class="low-margin"><a href="http://t.me/MarkLoLBot" target="_blank"><img src="images/telegram.png" width="30" height="30"></a></p>
+								</div>
+							</div>
+							<div class="slider-half-item" style="float:right">
+								<div class="image-scale scale-div-block">
+									<a data-fancybox="images" href="images/markbot.png">
+										<img src="images/markbot.png" class="slider-image image-scale">
+									</a>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+					<a class="slider__control slider__control_prev" href="#" role="button"></a>
+					<a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
+				</div>
+				</div>
+
+			</div>
+			<div class="section third-section">
+				<div class="middle-left-text">
+					<h1>Мои навыки</h1>
+				</div>
+			</div>
+			<div class="section fourth-section">
+				<div class="middle-left-text">
+					<h1>Мои социалки</h1>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			slideShow('.slider', {
+				isAutoplay: false
+			});
+  		</script>
+		<script src="script.js"></script>
+  </body>
+  
+</html>
