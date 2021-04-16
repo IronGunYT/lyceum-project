@@ -237,3 +237,20 @@ blockquote cite {
 
 	margin-left: 8vw;
 }
+
+.right-list{
+	position: absolute;
+	left: 60%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.text-in-list{
+	font-family: Alegreya;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 56px;
+
+	color: #FFFFFF;
+}
