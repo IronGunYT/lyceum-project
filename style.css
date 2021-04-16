@@ -230,3 +230,10 @@ blockquote cite {
 .image-scale img:hover{
 	transform: scale(1.1); /* Увеличиваем масштаб */
 }
+
+.my-photo{
+	height: 600px;
+	width: 489px;
+
+	margin-left: 8vw;
+}
