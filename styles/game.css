@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+    background: url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+}
+
+*::selection {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: Highway, serif;
+    text-shadow: black 1px 0 10px;
+    font-size: 300%;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+}
+
+.page{
+    background: url("../images/map.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px 30px;
+    min-height: 100vh;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
+}
+
+.game{
+    background-color: #312320;
+    width: 592px;
+    height: 592px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.end_game{
+    background-color: #312320;
+    width: 592px;
+    height: 592px;
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+
+.centered{
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+.centered a{
+    margin-top: 20px;
+}
+
+#result{
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+}
+
+.cell{
+    background-color: #46332D;
+    width: 128px;
+    height: 128px;
+    margin: 10px;
+    float: left;
+    z-index: 1;
+}
+
+.selected{
+    box-shadow: inset 0px 0px 0px 1px yellow;
+}
+
+.cell:hover{
+    box-shadow: inset 0px 0px 0px 1px white;
+}
+
+.cell img{
+    position: relative;
+    top: 4px;
+    left: 4px;
+    width: 120px;
+    height: 120px;
+    image-rendering: pixelated;
+    margin: 0;
+    z-index: 2;
+}
+
+@font-face {
+    font-family: "Highway";
+    src: url("../fonts/HWYGOTH.TTF") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: url("../fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.inventory{
+    background-color: #312320;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    display: flex;
+    margin: auto;
+}
+
+.inventory_cell{
+    background-color: #46332D;
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+}
+
+.inventory_cell:hover{
+    box-shadow: inset 0px 0px 0px 1px red;
+}
+
+.inventory_cell img{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: 60px;
+    height: 60px;
+    image-rendering: pixelated;
+    margin: 0;
+}
+
+.glow-button{
+    --button-color: #414833;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px var(--button-color) inset, 0 0 0 0 var(--button-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+
+.glow-button:hover{
+    box-shadow: 0 0 10px 0 var(--button-color) inset, 0 0 10px 4px var(--button-color);
+    // color: var(--button-color);
+}
+
+.tip{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    background: #F0F2F5;
+    border: 0.33px solid rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 16px 40px 16px 16px;
+}
+
+.tip p:first-of-type{
+    /* SF Title 2 Medium */
+
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.38px;
+    color: #000000;
+    margin: 0;
+}
+
+.tip p:last-of-type{
+    /* SF Text Regular */
+
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    /* or 133% */
+
+    letter-spacing: -0.24px;
+    margin: 4px 0 0;
+}
+
+.tip img{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.bars{
+    display: flex;
+    background-color: #312320;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    margin: 10px auto;
+}
+
+.bar{
+    background-color: #46332D;
+    width: max-content;
+    height: max-content;
+    margin: 5px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-left: 5px;
+}
+
+.menu{
+    display: flex;
+    background-color: #312320;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    margin: 10px auto;
+}
+
+.menu .el{
+    color: white;
+    background-color: #46332D;
+    margin: 5px;
+    padding: 0 5px;
+}
+
+.info{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+}

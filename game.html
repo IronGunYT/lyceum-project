@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Крутая игра | Pirates x BFDI</title>
+    <link rel="stylesheet" href="styles/game.css">
+    <script src="scripts/game.js"></script>
+</head>
+<body onload="main()">
+    <div class="tip" id="tip">
+        <img src="images/cross.png" alt="close" class="cross" width="30px" onclick="cross_clicked()">
+        <p>Проблемы с отображением?</p>
+        <p>Нажмите ctrl+minus</p>
+    </div>
+    <div class="page">
+        <h1>Pirates x BFDI</h1>
+        <div class="game">
+            <div class="end_game" id="end_game">
+                <!-- img src="images/end_game.png" alt="game over" -->
+                <div class="centered">
+                    <h2 id="result">Результат: </h2>
+                    <a href="" class="glow-button">Ещё раз</a>
+                </div>
+            </div>
+            <div id="c0" class="cell" onclick="cell_clicked(0)"><img src="" alt="Cell"></div>
+            <div id="c1" class="cell" onclick="cell_clicked(1)"><img src="" alt="Cell"></div>
+            <div id="c2" class="cell" onclick="cell_clicked(2)"><img src="" alt="Cell"></div>
+            <div id="c3" class="cell" onclick="cell_clicked(3)"><img src="" alt="Cell"></div>
+            <div id="c4" class="cell" onclick="cell_clicked(4)"><img src="" alt="Cell"></div>
+            <div id="c5" class="cell" onclick="cell_clicked(5)"><img src="" alt="Cell"></div>
+            <div id="c6" class="cell" onclick="cell_clicked(6)"><img src="" alt="Cell"></div>
+            <div id="c7" class="cell" onclick="cell_clicked(7)"><img src="" alt="Cell"></div>
+            <div id="c8" class="cell" onclick="cell_clicked(8)"><img src="" alt="Cell"></div>
+            <div id="c9" class="cell" onclick="cell_clicked(9)"><img src="" alt="Cell"></div>
+            <div id="c10" class="cell" onclick="cell_clicked(10)"><img src="" alt="Cell"></div>
+            <div id="c11" class="cell" onclick="cell_clicked(11)"><img src="" alt="Cell"></div>
+            <div id="c12" class="cell" onclick="cell_clicked(12)"><img src="" alt="Cell"></div>
+            <div id="c13" class="cell" onclick="cell_clicked(13)"><img src="" alt="Cell"></div>
+            <div id="c14" class="cell" onclick="cell_clicked(14)"><img src="" alt="Cell"></div>
+            <div id="c15" class="cell" onclick="cell_clicked(15)"><img src="" alt="Cell"></div>
+        </div>
+        <div class="inventory">
+            <div id="i0" class="inventory_cell" onclick="del_from_inventory_with_id(0)"><img></div>
+            <div id="i1" class="inventory_cell" onclick="del_from_inventory_with_id(1)"><img></div>
+            <div id="i2" class="inventory_cell" onclick="del_from_inventory_with_id(2)"><img></div>
+            <div id="i3" class="inventory_cell" onclick="del_from_inventory_with_id(3)"><img></div>
+            <div id="i4" class="inventory_cell" onclick="del_from_inventory_with_id(4)"><img></div>
+            <div id="i5" class="inventory_cell" onclick="del_from_inventory_with_id(5)"><img></div>
+        </div>
+        <div class="info">
+            <div class="bars">
+                <div class="bar hp">
+                    <img src="images/hp.png" alt="hp">
+                    <p id="hp">5/5</p>
+                </div>
+                <div class="bar attack">
+                    <img src="images/attack.png" alt="attack">
+                    <p id="attack">0</p>
+                </div>
+                <div class="bar score">
+                    <img src="images/score.png" alt="score">
+                    <p id="score">0</p>
+                </div>
+            </div>
+            <div class="menu">
+                <a class="el" href="index.html">
+                    <p>Главная</p>
+                </a>
+                <a class="el" href="">
+                    <p>Рестарт</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
