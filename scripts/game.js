@@ -6,6 +6,7 @@ var cells = [];
 var inv = [];
 var map = [];
 var inventory = [];
+var end_gameed = false;
 
 var hp = 5;
 var score = 0;
@@ -33,15 +34,12 @@ let neighbors = {
     15: [11, 14]
 };
 
-window.onload = function(){
+function main() {
+    console.log('loaded');
 	console.log('firefox fix');
 	let rect = document.getElementsByClassName("game")[0].getBoundingClientRect();
 	document.getElementById("end_game").style.top = `${rect.top+10}px`;
 	document.getElementById("end_game").style.left = `${rect.left+10}px`;
-}
-
-function main() {
-    console.log('loaded');
     if (document.cookie.split(';').filter(function(item) {
         return item.trim().indexOf('cross_used=') == 0
     }).length) {
@@ -93,7 +91,7 @@ function add_to_inventory(item){
 
 function regen_hp(amount){
     hp += amount;
-    if(hp > 5) hp = 5;
+    if(hp > max_hp) hp = max_hp;
 }
 
 // TODO: f
@@ -164,10 +162,12 @@ function del_from_inventory_with_id(id){
 function end_game(){
     document.getElementById("end_game").style.display = "inline";
     document.getElementById("result").innerHTML =  `Результат: ${score}`;
+	end_gameed = true;
 }
 
 var used_attack = 0;
 function cell_clicked(cell){
+	if(end_gameed) return;
     console.log(`clicked cell ${cell}`);
     let nb = neighbors[cell];
     let correct_cell = false;
