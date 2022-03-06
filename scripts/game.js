@@ -160,6 +160,9 @@ function del_from_inventory_with_id(id){
 }
 
 function end_game(){
+	let rect = document.getElementsByClassName("game")[0].getBoundingClientRect();
+	document.getElementById("end_game").style.top = `${rect.top+10}px`;
+	document.getElementById("end_game").style.left = `${rect.left+10}px`;
     document.getElementById("end_game").style.display = "inline";
     document.getElementById("result").innerHTML =  `Результат: ${score}`;
 	end_gameed = true;
